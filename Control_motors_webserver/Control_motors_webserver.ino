@@ -9,15 +9,12 @@ SoftwareSerial Serial1(8, 9); // RX, TX
 #define I2C_ADDRESS 0x0f
 
 //Wifi settings
-char ssid[] = "My WiFi Robot";    // your network SSID (name)
-char pass[] = "password";        // your network password
+char ssid[] = "My WiFi Robot";    // the name of your access point
+char pass[] = "password";        // the password for your access point
 int status = WL_IDLE_STATUS;     // the Wifi radio's status
 
 //Wifi server object
 WiFiEspServer server(80);
-
-// use a ring buffer to increase speed and reduce memory allocation
-//RingBuffer buf(8);
 
 void setup()
 {
